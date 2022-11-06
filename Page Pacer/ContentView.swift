@@ -8,19 +8,38 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @Environment (\.verticalSizeClass) var verticalSizeClass
+    let bookName = "Harry Potter and the Deathly Hallows"
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("Page Pacer")
+                .font(.largeTitle)
+                .fontWeight(.heavy)
+                .padding()
+            if verticalSizeClass == .compact {
+                HStack {
+                    BookInfoView(bookName: bookName)
+                    TimerView()
+                }
+            }
+            else {
+                VStack {
+                    BookInfoView(bookName: bookName)
+                    Spacer()
+                    TimerView()
+                    Spacer()
+                }
+            }
         }
-        .padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .previewInterfaceOrientation(.portrait)
+        ContentView()
+            .previewInterfaceOrientation(.landscapeRight)
     }
 }
