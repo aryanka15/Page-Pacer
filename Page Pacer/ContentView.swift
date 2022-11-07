@@ -20,14 +20,14 @@ struct ContentView: View {
             if verticalSizeClass == .compact {
                 HStack {
                     BookInfoView(bookName: bookName)
-                    TimerView()
+                    TimerView(timerTime: 200)
                 }
             }
             else {
                 VStack {
                     BookInfoView(bookName: bookName)
                     Spacer()
-                    TimerView()
+                    TimerView(timerTime: 200)
                     Spacer()
                 }
             }
