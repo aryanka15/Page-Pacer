@@ -1,31 +1,33 @@
 //
-//  ContentView.swift
+//  BookTimer.swift
 //  Page Pacer
 //
-//  Created by Aryan Karani on 11/5/22.
+//  Created by Aryan Karani on 11/6/22.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct BookTimer: View {
     
     @Environment (\.verticalSizeClass) var verticalSizeClass
-    let bookName = "Harry Potter and the Deathly Hallows"
+    let book: Book
+    
+    
     var body: some View {
         VStack {
-            Text("Page Pacer")
+            Text(book.title)
                 .font(.largeTitle)
                 .fontWeight(.heavy)
                 .padding()
             if verticalSizeClass == .compact {
                 HStack {
-                    BookInfoView(bookName: bookName)
+                    BookInfoView(book: book)
                     TimerView(timerTime: 200)
                 }
             }
             else {
                 VStack {
-                    BookInfoView(bookName: bookName)
+                    BookInfoView(book: book)
                     Spacer()
                     TimerView(timerTime: 200)
                     Spacer()
@@ -35,11 +37,9 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct BookTimer_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
-            .previewInterfaceOrientation(.portrait)
-        ContentView()
-            .previewInterfaceOrientation(.landscapeRight)
+        BookTimer(book: Book(title: "Hello", pages: 900, author: "Hello2", ISBN: nil, published: nil))
+            
     }
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BookInfoView: View {
     
-    let bookName: String
+    let book: Book
     
     @Environment (\.verticalSizeClass) var verticalSizeClass
     
@@ -18,17 +18,11 @@ struct BookInfoView: View {
         let layout = verticalSizeClass == .compact ? AnyLayout(VStackLayout()) : AnyLayout(HStackLayout())
         
         VStack {
-
-            Text(bookName)
-                .font(.title2)
-                .fontWeight(.semibold)
-                .multilineTextAlignment(.center)
-                .padding(5)
             layout {
                 Spacer()
-                Text("Pages: 1600")
+                Text("Pages: " + String(book.pages))
                 Spacer()
-                Text("Remaining: 800")
+                Text("Remaining: " + String(book.pages - 800))
                 Spacer()
                 Text("Goal: 11/15/05")
                 Spacer()
@@ -40,6 +34,6 @@ struct BookInfoView: View {
 
 struct BookInfoView_Previews: PreviewProvider {
     static var previews: some View {
-        BookInfoView(bookName: "Harry Potter and the Deathly Hallows")
+        BookInfoView(book: Book(title: "Hello", pages: 8000, author: "Hello 2", ISBN: nil, published: nil))
     }
 }

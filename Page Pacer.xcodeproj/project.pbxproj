@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F17C1AB291AB7860060378E /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F17C1AA291AB7860060378E /* Book.swift */; };
+		8F1E6BBD2918B7C900E37282 /* BookTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1E6BBC2918B7C900E37282 /* BookTimer.swift */; };
 		8FB3D2A529170F91000537D2 /* Page_PacerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB3D2A429170F91000537D2 /* Page_PacerApp.swift */; };
 		8FB3D2A729170F91000537D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB3D2A629170F91000537D2 /* ContentView.swift */; };
 		8FB3D2A929170F95000537D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FB3D2A829170F95000537D2 /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F17C1AA291AB7860060378E /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		8F1E6BBC2918B7C900E37282 /* BookTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTimer.swift; sourceTree = "<group>"; };
 		8FB3D2A129170F91000537D2 /* Page Pacer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Page Pacer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FB3D2A429170F91000537D2 /* Page_PacerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page_PacerApp.swift; sourceTree = "<group>"; };
 		8FB3D2A629170F91000537D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +40,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F17C1A8291AB6CB0060378E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8F1E6BBC2918B7C900E37282 /* BookTimer.swift */,
+				8FB3D2B429172C6D000537D2 /* TimerView.swift */,
+				8FB3D2B229172BA5000537D2 /* BookInfoView.swift */,
+				8FB3D2A629170F91000537D2 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8F17C1A9291AB7650060378E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8F17C1AA291AB7860060378E /* Book.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8FB3D29829170F91000537D2 = {
 			isa = PBXGroup;
 			children = (
@@ -55,10 +78,9 @@
 		8FB3D2A329170F91000537D2 /* Page Pacer */ = {
 			isa = PBXGroup;
 			children = (
-				8FB3D2B429172C6D000537D2 /* TimerView.swift */,
+				8F17C1A9291AB7650060378E /* Model */,
+				8F17C1A8291AB6CB0060378E /* Views */,
 				8FB3D2A429170F91000537D2 /* Page_PacerApp.swift */,
-				8FB3D2A629170F91000537D2 /* ContentView.swift */,
-				8FB3D2B229172BA5000537D2 /* BookInfoView.swift */,
 				8FB3D2A829170F95000537D2 /* Assets.xcassets */,
 				8FB3D2AA29170F95000537D2 /* Preview Content */,
 			);
@@ -145,6 +167,8 @@
 			files = (
 				8FB3D2B329172BA5000537D2 /* BookInfoView.swift in Sources */,
 				8FB3D2A729170F91000537D2 /* ContentView.swift in Sources */,
+				8F17C1AB291AB7860060378E /* Book.swift in Sources */,
+				8F1E6BBD2918B7C900E37282 /* BookTimer.swift in Sources */,
 				8FB3D2B529172C6D000537D2 /* TimerView.swift in Sources */,
 				8FB3D2A529170F91000537D2 /* Page_PacerApp.swift in Sources */,
 			);

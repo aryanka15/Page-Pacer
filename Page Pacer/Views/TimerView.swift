@@ -10,10 +10,10 @@ import SwiftUI
 struct TimerView: View {
     
     let timerTime: Int // Time in seconds
-    @State var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    @State var timerVal = 0 // Time left in seconds
-    @State var circleProgress = 1.0
-    @State var isTimerRunning = false
+    @State private var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @State private var timerVal = 0 // Time left in seconds
+    @State private var circleProgress = 1.0
+    @State private var isTimerRunning = false
     var body: some View {
         VStack {
             ZStack {
